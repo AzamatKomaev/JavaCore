@@ -1,5 +1,5 @@
 /*
-    Примененик блоков кода.
+    Применение блоков кода.
 */
 class BlockTest {
     public static void main(String args[]) {
