@@ -3,7 +3,7 @@
 */
 class Example2 {
     public static void main(String args[]) {
-        int num; // объявляем переменную num
+        int num;   // объявляем переменную num
         num = 100; // присваиваем переменной num значение 100
 
         System.out.println("Это переменная num: " + num);
