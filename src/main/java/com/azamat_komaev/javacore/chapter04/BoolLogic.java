@@ -1,3 +1,5 @@
+package com.azamat_komaev.javacore.chapter04;
+
 // Продемонстрировать применение логических операций
 class BoolLogic {
     public static void main(String args[]) {
