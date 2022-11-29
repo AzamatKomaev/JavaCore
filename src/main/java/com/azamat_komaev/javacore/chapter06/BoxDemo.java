@@ -8,16 +8,16 @@ class Box {
     double height;
     double depth;
 
+    Box () {
+        System.out.println("Construct object Box");
+        width = 10;
+        height = 10;
+        depth = 10;
+    }
+
     // return box volume
     double getVolume() {
         return width * height * depth;
-    }
-
-    // set box size
-    void setDim(double w, double h, double d) {
-        width = w;
-        height = h;
-        depth = d;
     }
 }
 
@@ -28,9 +28,6 @@ public class BoxDemo {
         Box mybox2 = new Box();
 
         double vol1, vol2;
-
-        mybox1.setDim(10, 20, 15);
-        mybox2.setDim(3, 6, 9);
 
         vol1 = mybox1.getVolume();
         vol2 = mybox2.getVolume();
