@@ -8,11 +8,10 @@ class Box {
     double height;
     double depth;
 
-    Box () {
-        System.out.println("Construct object Box");
-        width = 10;
-        height = 10;
-        depth = 10;
+    Box (double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
     }
 
     // return box volume
@@ -24,8 +23,8 @@ class Box {
 // In this class init Box object
 public class BoxDemo {
     public static void main(String[] args) {
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box mybox1 = new Box(10, 20, 15);
+        Box mybox2 = new Box(3, 6, 9);
 
         double vol1, vol2;
 
