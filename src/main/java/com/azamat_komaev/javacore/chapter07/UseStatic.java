@@ -12,6 +12,10 @@ public class UseStatic {
 
     static {
         System.out.println("Static block is initialized.");
+        num2 = num1 * 4;
+    }
+
+    public static void main(String[] args) {
         meth(42);
     }
 }
