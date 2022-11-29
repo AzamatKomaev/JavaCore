@@ -2,8 +2,8 @@ package com.azamat_komaev.javacore.chapter06;
 
 // There is integer stack where you can save until 10 int values
 class Stack {
-    int stck[] = new int[10];
-    int tos;
+    private int stck[] = new int[10];
+    private int tos;
 
     // init top of the stack
     Stack() {
@@ -55,5 +55,9 @@ public class TestStack {
         for (int i=0; i<10; i++) {
             System.out.println(mystack2.pop());
         }
+
+        // You cannot use it because It is private!
+        // mystack1.tos = -2;
+        // mystack2.stck[3] = 100;
     }
 }
