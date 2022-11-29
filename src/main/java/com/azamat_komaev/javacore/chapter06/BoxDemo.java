@@ -12,6 +12,13 @@ class Box {
     double getVolume() {
         return width * height * depth;
     }
+
+    // set box size
+    void setDim(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
 }
 
 // In this class init Box object
@@ -20,15 +27,11 @@ public class BoxDemo {
         Box mybox1 = new Box();
         Box mybox2 = new Box();
 
-        mybox1.width = 10;
-        mybox1.height = 20;
-        mybox1.depth = 15;
-
-        mybox2.width = 3;
-        mybox2.height = 6;
-        mybox2.depth = 9;
-
         double vol1, vol2;
+
+        mybox1.setDim(10, 20, 15);
+        mybox2.setDim(3, 6, 9);
+
         vol1 = mybox1.getVolume();
         vol2 = mybox2.getVolume();
         System.out.println("Volume of the first box is " + vol1);
