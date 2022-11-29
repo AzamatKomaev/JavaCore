@@ -1,3 +1,5 @@
+package com.azamat_komaev.javacore.chapter03;
+
 // Пример динамической инициализаций
 class DynInit {
     public static void main(String args[]) {
