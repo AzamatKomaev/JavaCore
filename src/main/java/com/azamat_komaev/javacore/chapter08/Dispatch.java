@@ -14,7 +14,7 @@ class BDispatch extends ADispatch {
     }
 }
 
-class CDispatch extends BDispatch {
+class CDispatch extends ADispatch {
     void callme() {
         System.out.println("callme() from C");
     }
