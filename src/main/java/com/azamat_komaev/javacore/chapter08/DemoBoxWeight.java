@@ -1,15 +1,15 @@
 package com.azamat_komaev.javacore.chapter08;
 
 class Box {
-    double width;
-    double height;
-    double depth;
+    private double width;
+    private double height;
+    private double depth;
 
     // Create clone of the object
-    Box(Box box) {
-        width = box.width;
-        height = box.height;
-        depth = box.depth;
+    Box(Box ob) {
+        width = ob.width;
+        height = ob.height;
+        depth = ob.depth;
     }
 
     Box(double width, double height, double depth) {
@@ -38,10 +38,23 @@ class Box {
 class BoxWeight extends Box {
     double weight;
 
+    BoxWeight(BoxWeight ob) {
+        super(ob);
+        weight = ob.weight;
+    }
+
     BoxWeight(double width, double height, double depth, double weight) {
-        this.width = width;
-        this.height = height;
-        this.depth = depth;
+        super(width, height, depth);
+        this.weight = weight;
+    }
+
+    BoxWeight() {
+        super();
+        weight = -1;
+    }
+
+    BoxWeight(double len, double weight) {
+        super(len);
         this.weight = weight;
     }
 }
@@ -50,16 +63,34 @@ public class DemoBoxWeight {
     public static void main(String[] args) {
         BoxWeight box1 = new BoxWeight(10, 20, 15, 34.3);
         BoxWeight box2 = new BoxWeight(2, 3, 4, 0.076);
+        BoxWeight box3 = new BoxWeight();
+        BoxWeight mycube = new BoxWeight(3, 2);
+        BoxWeight myclone = new BoxWeight(mycube);
+        double vol;
 
-        double vol1, vol2;
-
-        vol1 = box1.getVolume();
-        vol2 = box2.getVolume();
-
-        System.out.println("Volume of box1 is " + vol1);
+        vol = box1.getVolume();
+        System.out.println("Volume of box1 is " + vol);
         System.out.println("Weight of box1 is " + box1.weight);
+        System.out.println();
 
-        System.out.println("Volume of box2 is " + vol2);
+        vol = box2.getVolume();
+        System.out.println("Volume of box2 is " + vol);
         System.out.println("Weight of box2 is " + box2.weight);
+        System.out.println();
+
+        vol = box3.getVolume();
+        System.out.println("Volume of box3 is " + vol);
+        System.out.println("Weight of box3 is " + box3.weight);
+        System.out.println();
+
+        vol = mycube.getVolume();
+        System.out.println("Volume of mycube is " + vol);
+        System.out.println("Weight of mycube is " + mycube.weight);
+        System.out.println();
+
+        vol = myclone.getVolume();
+        System.out.println("Volume of myclone is " + vol);
+        System.out.println("Weight of myclone is " + myclone.weight);
+        System.out.println();
     }
 }
