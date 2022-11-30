@@ -59,38 +59,47 @@ class BoxWeight extends Box {
     }
 }
 
+// add cost attribute
+class Shipment extends BoxWeight {
+    public double cost;
+
+    Shipment(Shipment ob) {
+        super(ob);
+        cost = ob.cost;
+    }
+
+    Shipment(double width, double height, double depth,
+             double weight, double cost) {
+        super(width, height, depth, weight);
+        this.cost = cost;
+    }
+
+    Shipment() {
+        super();
+        cost = -1;
+    }
+
+    Shipment(double len, double weight, double cost) {
+        super(len, weight);
+        this.cost = cost;
+    }
+}
+
 public class DemoBoxWeight {
     public static void main(String[] args) {
-        BoxWeight box1 = new BoxWeight(10, 20, 15, 34.3);
-        BoxWeight box2 = new BoxWeight(2, 3, 4, 0.076);
-        BoxWeight box3 = new BoxWeight();
-        BoxWeight mycube = new BoxWeight(3, 2);
-        BoxWeight myclone = new BoxWeight(mycube);
-        double vol;
+        Shipment shipment1 = new Shipment(10, 20, 15, 10, 3.41);
+        Shipment shipment2 = new Shipment(2, 3, 4, 0.76, 1.28);
+        double vol1, vol2;
 
-        vol = box1.getVolume();
-        System.out.println("Volume of box1 is " + vol);
-        System.out.println("Weight of box1 is " + box1.weight);
-        System.out.println();
+        vol1 = shipment1.getVolume();
+        vol2 = shipment2.getVolume();
 
-        vol = box2.getVolume();
-        System.out.println("Volume of box2 is " + vol);
-        System.out.println("Weight of box2 is " + box2.weight);
+        System.out.println("Volume of shipment1 is " + vol1);
+        System.out.println("Weight of shipment1 is " + shipment1.weight);
+        System.out.println("Cost of shipment: $" + shipment1.cost);
         System.out.println();
-
-        vol = box3.getVolume();
-        System.out.println("Volume of box3 is " + vol);
-        System.out.println("Weight of box3 is " + box3.weight);
-        System.out.println();
-
-        vol = mycube.getVolume();
-        System.out.println("Volume of mycube is " + vol);
-        System.out.println("Weight of mycube is " + mycube.weight);
-        System.out.println();
-
-        vol = myclone.getVolume();
-        System.out.println("Volume of myclone is " + vol);
-        System.out.println("Weight of myclone is " + myclone.weight);
-        System.out.println();
+        System.out.println("Volume of shipment2 is " + vol2);
+        System.out.println("Weight of shipment2 is " + shipment2.weight);
+        System.out.println("Cost of shipment: $" + shipment2.cost);
     }
 }
