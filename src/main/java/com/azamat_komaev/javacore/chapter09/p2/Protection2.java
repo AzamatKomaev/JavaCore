@@ -1,6 +1,6 @@
-package com.azamat_komaev.javacore.chapter08.p2;
+package com.azamat_komaev.javacore.chapter09.p2;
 
-import com.azamat_komaev.javacore.chapter08.p1.Protection;
+import com.azamat_komaev.javacore.chapter09.p1.Protection;
 
 public class Protection2 extends Protection {
     Protection2() {

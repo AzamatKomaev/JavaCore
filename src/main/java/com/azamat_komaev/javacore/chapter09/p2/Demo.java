@@ -1,4 +1,4 @@
-package com.azamat_komaev.javacore.chapter08.p2;
+package com.azamat_komaev.javacore.chapter09.p2;
 
 public class Demo {
     public static void main(String[] args) {

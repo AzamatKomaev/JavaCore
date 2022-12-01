@@ -1,4 +1,4 @@
-package com.azamat_komaev.javacore.chapter08;
+package com.azamat_komaev.javacore.chapter09;
 
 class AnotherClient implements Callback {
     public void callback(int num) {
