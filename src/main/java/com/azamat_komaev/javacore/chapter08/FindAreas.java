@@ -4,7 +4,7 @@ package com.azamat_komaev.javacore.chapter08;
 
 import W.W.R;
 
-class Figure {
+abstract class Figure {
     double dim1;
     double dim2;
 
@@ -13,10 +13,7 @@ class Figure {
         this.dim2 = dim2;
     }
 
-    double getArea() {
-        System.out.println("Area of the figure is unknown");
-        return 0;
-    }
+    abstract double getArea();
 }
 
 class Rectangle extends Figure {
@@ -43,18 +40,15 @@ class Triangle extends Figure {
 
 public class FindAreas {
     public static void main(String[] args) {
-        Figure figure = new Figure(10, 10);
+        // Figure figure = new Figure(10, 10); // cant be runned!
         Rectangle rectangle = new Rectangle(9, 5);
         Triangle triangle = new Triangle(10, 8);
-        Figure figref;
+        Figure figref; // object is not creating
         
         figref = rectangle;
         System.out.println("Area is " + figref.getArea());
 
         figref = triangle;
-        System.out.println("Area is " + figref.getArea());
-
-        figref = figure;
         System.out.println("Area is " + figref.getArea());
     }
 }
