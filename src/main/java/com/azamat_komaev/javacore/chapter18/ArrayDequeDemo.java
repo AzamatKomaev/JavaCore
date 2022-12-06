@@ -16,9 +16,5 @@ public class ArrayDequeDemo {
         while (deque.peek() != null) {
             System.out.print(deque.pop() + " ");
         }
-
     }
-
-
-
 }
