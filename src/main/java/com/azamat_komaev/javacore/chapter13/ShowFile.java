@@ -5,14 +5,12 @@ import java.io.*;
 public class ShowFile {
     public static void main(String[] args) {
         int symbol;
-        FileInputStream fileInput = null;
 
         if (args.length != 1) {
             throw new IllegalArgumentException("You have to enter file name in args!");
         }
 
-        try {
-            fileInput = new FileInputStream(args[0]);
+        try(FileInputStream fileInput = new FileInputStream(args[0])) {
             do {
                 symbol = fileInput.read();
                 if (symbol != -1) {
@@ -23,14 +21,6 @@ public class ShowFile {
             System.out.println("File not found!");
         } catch (IOException e) {
             System.out.println("Cannot read data from file!");
-        } finally {
-            try {
-                if (fileInput != null) {
-                    fileInput.close();
-                };
-            } catch (IOException e) {
-                System.out.println("Cannot close file!");
-            }
         }
     }
 }
