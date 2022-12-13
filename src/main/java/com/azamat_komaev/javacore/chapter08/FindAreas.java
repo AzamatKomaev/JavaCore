@@ -2,8 +2,6 @@ package com.azamat_komaev.javacore.chapter08;
 
 // Use polymorphism
 
-import W.W.R;
-
 abstract class Figure {
     double dim1;
     double dim2;

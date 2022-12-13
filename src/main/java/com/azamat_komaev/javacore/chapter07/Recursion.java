@@ -1,7 +1,5 @@
 package com.azamat_komaev.javacore.chapter07;
 
-import W.W.F;
-
 // Simple recursion example
 class Factorial {
     int fact(int n) {
