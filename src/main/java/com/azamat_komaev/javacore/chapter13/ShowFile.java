@@ -21,13 +21,12 @@ public class ShowFile {
             } while (symbol != -1);
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
-            return;
         } catch (IOException e) {
             System.out.println("Cannot read data from file!");
         } finally {
             try {
                 if (fileInput != null) {
-                    fileInput.close()
+                    fileInput.close();
                 };
             } catch (IOException e) {
                 System.out.println("Cannot close file!");
