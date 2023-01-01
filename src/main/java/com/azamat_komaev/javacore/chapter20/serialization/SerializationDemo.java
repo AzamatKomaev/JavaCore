@@ -3,7 +3,7 @@ package com.azamat_komaev.javacore.chapter20.serialization;
 import java.io.*;
 
 public class SerializationDemo {
-    private final static String filePath = "/home/azamat/programming/java/java_mentoring/src/main/java/com/azamat_komaev/javacore/chapter20/serialization/serial";
+    private final static String filePath = "/home/azamat/programming/java/java_mentoring/src/main/java/com/azamat_komaev/javacore/chapter20/serialization/serial.class";
 
     static void serializeObject() {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {

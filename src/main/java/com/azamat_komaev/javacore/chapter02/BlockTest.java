@@ -1,3 +1,5 @@
+package com.azamat_komaev.javacore.chapter02;
+
 /*
     Применение блоков кода.
 */
